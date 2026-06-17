@@ -46,4 +46,16 @@ public class UserController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    // ↓ ADD THIS NEW METHOD HERE ↓
+    @PostMapping("/login")
+    public ResponseEntity<?> loginUser(@RequestBody User user) {
+        try {
+            User existingUser = userService.getUserByEmail(user.getEmail());
+            return ResponseEntity.ok(existingUser);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
 }

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Digital Banking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #1a3c5e;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #f0a500;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        .nav-links .btn-login {
+            background-color: #f0a500;
+            color: #1a3c5e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links .btn-login:hover {
+            background-color: white;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #1a3c5e, #2d6a9f);
+            color: white;
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #f0a500;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: #f0a500;
+            color: #1a3c5e;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 15px 35px;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .btn-secondary:hover {
+            transform: scale(1.05);
+            background-color: white;
+            color: #1a3c5e;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            color: #1a3c5e;
+            margin-bottom: 10px;
+        }
+
+        .features p {
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            color: #1a3c5e;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        /* STATS SECTION */
+        .stats {
+            background-color: #1a3c5e;
+            padding: 60px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 42px;
+            color: #f0a500;
+            font-weight: bold;
+        }
+
+        .stat-item p {
+            color: white;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0f2438;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Secure<span>Bank</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="register.html">Register</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Banking Made <span>Simple</span><br>& Secure</h1>
+        <p>Manage your finances with ease. Transfer funds, apply for loans,
+           and track transactions all in one place.</p>
+        <div class="hero-buttons">
+            <a href="register.html" class="btn-primary">Open Account</a>
+            <a href="login.html" class="btn-secondary">Login</a>
+        </div>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="features">
+        <h2>Why Choose SecureBank?</h2>
+        <p>Everything you need for modern banking in one platform</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure Transactions</h3>
+                <p>Bank-grade encryption and OTP verification for every transaction.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <h3>Instant Transfers</h3>
+                <p>Transfer money instantly to any account 24/7.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Track Spending</h3>
+                <p>View all your transactions and monitor your spending habits.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏦</div>
+                <h3>Easy Loans</h3>
+                <p>Apply for home, car, personal or education loans instantly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS SECTION -->
+    <div class="stats">
+        <div class="stat-item">
+            <h3>10K+</h3>
+            <p>Happy Customers</p>
+        </div>
+        <div class="stat-item">
+            <h3>₹50Cr+</h3>
+            <p>Transactions Processed</p>
+        </div>
+        <div class="stat-item">
+            <h3>99.9%</h3>
+            <p>Uptime Guarantee</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Customer Support</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 SecureBank. All rights reserved. | Built with Java Spring Boot</p>
+    </footer>
+
+</body>
+</html>
